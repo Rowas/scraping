@@ -13,3 +13,5 @@ c) for my own ease of use.
 Odds are I won't accept any edits to the code.
 Unless it grows big and popular in demand, then maybe ..
 For now, it's my own project and not for use.
+
+Built for use in Node.js
