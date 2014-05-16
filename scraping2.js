@@ -40,8 +40,13 @@ for (i; i <= p; i++ ) {
           array2.push(array1[_i]);
       }*/
 	  //console.log(array1);
-    file = ""+fs.readFileSync('scrape.txt');
-		existing = file ? JSON.parse(file) : [];
+    file = "";
+    try{
+      file = file+fs.readFileSync('scrape.txt');
+    }catch(e){
+      fs.openSync('scrape.txt', 'w');
+    }
+		existing = file != "" ? JSON.parse(file) : [];
 		console.log('existing.',existing);
 		existing = existing.concat(array1);
 		fs.writeFileSync('scrape.txt', JSON.stringify(existing));
