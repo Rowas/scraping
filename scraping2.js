@@ -6,8 +6,9 @@ var fs = require('fs');
 var objekt = "antal sidor";
 var p = 1;
 var i = 1;
-array1 = "stuffs"
-array2 = []
+array1 = "stuffs";
+array2 = [];
+var file "";
 
 //Define url to pull from.
 //Define headers to get proper access to the API.
@@ -38,7 +39,11 @@ for (i; i <= p; i++ ) {
           array2.push(array1[_i]);
       }*/
 	  console.log(array1);
-    fs.appendFile('scrape.txt', JSON.stringify(array1));
+    file = ""+fs.readFileSync('scrape.txt');
+		existing = file ? JSON.parse(file) : [];
+		console.log('existing.',existing);
+		existing = existing.concat(array1);
+		fs.writeFileSync('scrape.txt', JSON.stringify(existing));
     }
   })
   }
