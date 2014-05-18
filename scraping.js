@@ -1,6 +1,7 @@
 //Initiate modules.
 var request = require('request');
 var fs = require('fs');
+var db = require('node-mysql');
 
 //Initiate global variables.
 var objekt = "antal sidor";
