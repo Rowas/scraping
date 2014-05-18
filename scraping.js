@@ -48,7 +48,7 @@ for (i; i <= p; i++ ) {
       fs.openSync('scrape.txt', 'w');
     }
 		existing = file != "" ? JSON.parse(file) : [];
-		console.log('existing.',existing);
+		console.log('File found; Starting merge;');
 		existing = existing.concat(array1);
 		fs.writeFileSync('scrape.txt', JSON.stringify(existing));
     }
