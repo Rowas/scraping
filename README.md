@@ -15,3 +15,9 @@ Unless it grows big and popular in demand, then maybe ..
 For now, it's my own project and not for use.
 
 Built for use in Node.js
+
+
+TODO List:
+==========
+
+1) Incorporate output from script into database.
